@@ -7,6 +7,47 @@
   <title>waseema --Developer</title>
   <link rel="stylesheet" href="style.css">
   <style>
+ section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #FFA500;
+    }
 
 
   </style>
@@ -50,6 +91,39 @@
           delightful user experiences.</p>
       </div>
     </section>
+    <!-- home about and other pages -->
+    <section id="home" >
+  <h1>Hi, I'm Waseema</h1>
+  <p>Final-year BCA student</p>
+  <p>Chennai</p>
+  <p>India.</p> I build responsive websites using HTML, CSS, and JavaScript.</p>
+  <a href="home.html" class="btn" target="_blank">View Full Home Page</a>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>BCA student at XYZ College, Chennai, India. Passionate about web development and UI/UX design...</p>
+  <a href="about.html" class="btn" target="_blank">View Full About Page</a>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <ul>
+    <li>Netflix Clone (HTML, CSS, JS)</li>
+    <li>Amazon Clone (HTML, CSS) </li>
+    <li>StudyMate (React) – In progress </li>
+    <li>ImageForm Page</li>
+  </ul>
+  <a href="projects.html" class="btn" target="_blank">View Full Projects Page</a>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Reach me at +91 9025834156‬</p>
+  <p>Mail ID : <a href="mailto:jwaseema16@gmail.com">jwaseema16@gmail.com</a></p>
+  <p>Also connect via <a href="https://github.com/waseema16/PROFILE" target="_blank">GitHub repo</a></p>
+  <a href="contact.html" class="btn" target="_blank">View Full Contact Page</a>
+</section>
 
 </body>
 
