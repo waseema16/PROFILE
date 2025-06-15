@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+   body {
+    background-color: #0a192f;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    color: #facc15;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
+    color: #d1d5db;
+    margin-bottom: 40px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #112240;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #a1a1aa;
+  }
+
+  .contact-form button {
+    padding: 15px;
+    background-color: #facc15;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #eab308;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    background-color: #112240;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.2);
+  }
+
+  .contact-info h3 {
+    color: #facc15;
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    color: #d1d5db;
+  }
+
+  .contact-info a {
+    color: #38bdf8;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    color: #facc15;
+  }
+
+</style>
+
+</head>
+<body>
+   <section class="contact-section">
+  <h2>Contact Me</h2>
+  <p class="contact-subtext">Have a question or want to work together? Drop me a message or reach me directly!</p>
+
+  <div class="contact-content">
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info Box -->
+    <div class="contact-info">
+      <h3>Reach Me At:</h3>
+      <p><strong>📞 Mobile:</strong> ‪+91 9025834156‬</p>
+      <p><strong>📧 Email:</strong> jwaseema16@gmail.com</p>
+      <p><strong>📸 Instagram:</strong> <a href="https://instagram.com/yourid" target="_blank">waseema_169</a></p>
+      <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile-id" target="_blank">linkedin.com/in/your-profile-id</a></p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
