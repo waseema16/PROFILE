@@ -6,6 +6,17 @@
       background-color: rgb(2, 2, 46);
       color: white;
     }
+    /* Default style for desktop */
+.container {
+  display: flex;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
     nav{
       display: flex;
       justify-content: space-around;
