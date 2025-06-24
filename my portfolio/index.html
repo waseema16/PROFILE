@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>waseema Portfolio</title>
     <style>
         * {
@@ -14,37 +13,82 @@
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+}
+ .navbar {
+      background-color: #002147;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #00bfff;
+    }
+
+    .toggle-btn {
+      display: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #002147;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .toggle-btn {
+        display: block;
+      }
+    }
         body {
             background-color: #1f4574; 
             color: #ddd;
-            font-family: 'Alegreya', serif;
+            font-family:  serif;
             overflow-x: hidden;
         }
-        .navbar {
-            position: fixed;
-            top: 0px;
-            left: 50%;
-             width: 100%;
-            background:#002147;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            transform: translateX(-50%);
-        }
-
-        .logo img {
-            height: auto;
-            width: 110px;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap:35px;
-        }
-
         @media (max-width: 900px) {
             .about-container {
                 flex-direction: column;
@@ -89,17 +133,6 @@
                 font-size: 1.1rem;
             }
         }
-
-        .navbar ul li a {
-            text-decoration: none;
-            font-size: 17px;
-            padding: 8px 12px;
-            border-radius: 20px;
-            position: relative;
-           
-        }
-
-        /* --- Hero Section --- */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -146,7 +179,6 @@
 
         .btn:hover {
             background: transparent;
-            color: var(--primary-color);
         }
 
         .hero-image {
@@ -181,7 +213,6 @@
 
         .web-dev-text {
             max-width: 500px;
-            color: var(--white);
             text-align: left;
         }
 
@@ -243,10 +274,9 @@
 
         .skill-bar {
             width: 100%;
-            background: #cdc9c9;
+            background: #0c0e87;
             border-radius: 10px;
             height: 12px;
-            position: relative;
             overflow: hidden;
             margin-top: 5px;
         }
@@ -260,15 +290,12 @@
         .about-section {
             padding: 100px 10%;
             margin: 0 auto;
-            background: var(--dark-bg);
             overflow: hidden;
         }
 
         .about-section>h1 {
             text-align: center;
             font-size: 3rem;
-            color: var(--primary-color);
-            text-shadow: 0 0 15px var(--primary-color);
             margin-bottom: 60px;
         }
 
@@ -281,17 +308,10 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-
-        .about-image {
-            position: relative;
-            flex-shrink: 0;
-        }
-
         .about-image img {
             height: 320px;
             width: 320px;
             border-radius: 50%;
-            border: 6px solid var(--primary-color);
             object-fit: cover;
         }
         .about-content {
@@ -302,25 +322,18 @@
         .about-content h3 {
             font-size: 2.5rem;
             margin-bottom: 15px;
-            color: var(--primary-color);
-            text-shadow: 0 0 10px var(--primary-color);
         }
         .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--light-text);
             margin-bottom: 20px;
         }
-
-        /* --- Timeline Section --- */
         .edu-section {
             padding: 100px 10%;
-            background: var(--gradient-skills);
             overflow: hidden;
         }
 
         .edu {
-            position: relative;
             max-width: 1000px;
             margin: 0 auto;
             width: 100%;
@@ -333,12 +346,9 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--primary-color);
-            text-shadow: 0 0 15px var(--primary-color);
         }
 
         .edu-container {
-            position: relative;
             display: flex;
             flex-direction: column;
             gap: 50px;
@@ -353,48 +363,37 @@
             left: 50%;
             width: 4px;
             height: 100%;
-            background: var(--primary-color);
-            box-shadow: 0 0 10px var(--primary-color);
             transform: translateX(-50%);
-            z-index: 1;
         }
 
         .edu-item {
-            position: relative;
             width: 90%;
             padding: 25px;
             background: rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-sizing: border-box;
-            z-index: 2;
         }
 
         .edu-dot {
             width: 20px;
             height: 20px;
-            background: var(--primary-color);
             border-radius: 50%;
             position: absolute;
             top: calc(50% - 10px);
-            z-index: 3;
-            box-shadow: 0 0 12px var(--primary-color), 0 0 25px var(--primary-color);
           
         }
         .edu-item h3 {
             font-size: 1.8rem;
             margin-bottom: 8px;
-            color: var(--primary-color);
         }
         .edu-item p {
             font-size: 1rem;
-            color: var(--light-text);
             line-height: 1.7;
         }
         /* --- Projects Section --- */
         .projects-section {
             padding: 100px 10%;
-            background: var(--dark-bg);
             overflow: hidden;
         }
 
@@ -403,8 +402,6 @@
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 20px;
-            color: var(--primary-color);
-            text-shadow: 0 0 15px var(--primary-color);
             text-align: center;
         }
 
@@ -414,10 +411,8 @@
         }
 
         .filter-btn {
-            color: var(--primary-color);
             padding: 10px 25px;
             margin: 8px;
-            border: 2px solid var(--primary-color);
             cursor: pointer;
             border-radius: 25px;
             font-size: 1rem;
@@ -427,8 +422,6 @@
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: var(--primary-color);
-            color: var(--dark-bg);
             transform: scale(1.05) translateY(-2px);
             box-shadow: 0 5px 15px rgba(201, 168, 101, 0.4);
         }
@@ -463,6 +456,7 @@
      .project-img img {
             width: 100%;
             height: 100%;
+            position: relative;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -470,30 +464,18 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            background: var(--primary-color);
+             transform: translate(-50%, -50%) scale(1);
             padding: 10px 20px;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: bold;
-            color: var(--dark-bg);
             text-decoration: none;
-            opacity: 0;
-            box-shadow: 0 0 10px var(--primary-color);
-            z-index: 2;
+            color: white;
+            background-color: black;
         }
-
-        .project-img:hover .live-btn {
-            transform: translate(-50%, -50%) scale(1);
-        }
-        .project-img:hover::after {
-            opacity: 1;
-        }
-
         .project h2 {
             font-size: 1.5rem;
             margin: 10px 0;
-            color: var(--primary-color);
         }
 
         .project p {
@@ -534,6 +516,10 @@
         }
 
         h2 {
+            font-size: 1.5rem;
+            color: #daa659;
+        }
+        h3 {
             font-size: 1.5rem;
             color: #daa659;
         }
@@ -689,44 +675,6 @@
             .about-content {
                 text-align: center;
             }
-        /* Max Width 768px (Tablets Portrait, Large Phones) */
-        @media (max-width: 768px) {
-            .navbar {
-                width: 95%;
-                padding: 12px 20px;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
-            .navbar ul {
-                display: none;
-                /* Ensure it's hidden initially */
-                flex-direction: column;
-                background: rgba(10, 10, 10, 0.95);
-                position: absolute;
-                top: 70px;
-                /* Adjusted top position */
-                left: 0;
-                width: 100%;
-                text-align: center;
-                border-radius: 0 0 15px 15px;
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-                padding: 15px 0;
-                gap: 10px;
-            }
-
-            .navbar ul.show {
-                display: flex;
-                /* Show when toggled */
-            }
-
-            .navbar ul li a {
-                padding: 12px 20px;
-                display: block;
-            }
-
             .footer-container {
                 flex-direction: column;
                 text-align: center;
@@ -739,21 +687,22 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="logo...jpg" alt="waseema Logo">
-        </div>
-        <div class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links"><i
-                class="fas fa-bars"></i></div>
-        <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-             <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+   <nav class="navbar">
+    <div class="logo">
+      <img src="logo...jpg" alt="Waseema Logo" />
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skill</a></li>
+      <li><a href="#about">Project</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contacts</a></li>
+    </ul>
+    <div class="toggle-btn" id="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
     <section class="hero" id="home">
         <div class="hero-content">
             <h4>Creative Web Developer</h4>
@@ -761,7 +710,7 @@
             <p >Crafting stunning web experiences with innovation & passion.</p>
             <a href="resume.pdf" class="btn">Download Resume</a>
         </div>
-        <div class="hero-image" data-aos="zoom-in" data-aos-delay="500">
+        <div class="hero-image">
             <img src="profile.jpg" alt="waseema">
         </div>
     </section>
@@ -789,7 +738,7 @@
 
     <!-- Skills Section -->
     <section class="skills-section" id="skills">
-        <h2 data-aos="fade-down">My Skills</h2>
+        <h2>My Skills</h2>
         <div class="skills-container">
             <div class="skill-card">
                 <h3>HTML</h3>
@@ -825,9 +774,9 @@
             <div class="about-content">
                 <h3>Hello! I'm <span>Waseema</span></h3>
                 <p>
-                        I am a passionate <strong>web developer</strong>, currently in my <strong>first year</strong>
+                        I am a passionate <strong>web developer</strong>, currently in my <strong>third year</strong>
                         of a
-                        <strong>Bachelor of Computer Applications (BCA)</strong> at Madras University.
+                        <strong>Bachelor of Computer Applications (BCA)</strong> at thiruvalluvar University.
                         With a deep love for coding and design, I strive to create
                         <strong>user-friendly, elegant,
                             and interactive websites</strong> that not only look stunning but also provide a seamless
@@ -862,30 +811,30 @@
     
         <div class="projects">
             <!-- Project 1 -->
-            <div class="project html" data-aos="zoom-in" data-aos-delay="100">
-                <div class="project-img" onclick="openLive('https://registrationform1project.netlify.app/')">
-                    <img src="project 1.png" alt="Login Page Project">
-                    <a href="https://registrationform1project.netlify.app/" class="live-btn" target="_blank">LIVE</a>
+            <div class="project html">
+                <div class="project-img" onclick="openLive('https://waseema16.github.io/Internship/imageform.html')">
+                    <img src="project1.png" alt="Login Page Project">
+                    <a href="https://waseema16.github.io/Internship/imageform.html" class="live-btn" target="_blank">LIVE</a>
                 </div>
-                <h2>Login Page</h2>
-                <p>Clean login form using HTML & CSS.</p>
+                <h2>Login Form</h2>
+                <p>Login form using HTML & CSS.</p>
             </div>
             <!-- Project 2 -->
-            <div class="project html" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-img" onclick="openLive('https://disne-india.netlify.app/')">
-                    <img src="project 2.png" alt="Disney India Clone">
-                    <a href="https://disne-india.netlify.app/" class="live-btn" target="_blank">LIVE</a>
+            <div class="project html">
+                <div class="project-img" onclick="openLive('https://waseema16.github.io/portfolio-pract/')">
+                    <img src="project2.png" alt="coffee shop theme">
+                    <a href="https://waseema16.github.io/portfolio-pract/" class="live-btn" target="_blank">LIVE</a>
                 </div>
-                <h2>Disney India Clone</h2>
-                <p>Flexbox layout replica.</p>
+                <h2>Coffee shop theme</h2>
+                <p>Flexbox and grid</p>
             </div>
             <!-- Project 3 -->
-            <div class="project html" data-aos="zoom-in" data-aos-delay="300">
-                <div class="project-img" onclick="openLive('https://nowarch-architechture.netlify.app/')">
-                    <img src="project 3.png" alt="Nowarch Architecture Site">
-                    <a href="https://nowarch-architechture.netlify.app/" class="live-btn" target="_blank">LIVE</a>
+            <div class="project html">
+                <div class="project-img" onclick="openLive('https://waseema16.github.io/Front-End/amazon/index')">
+                    <img src="project3.png" alt="Nowarch Architecture Site">
+                    <a href="https://waseema16.github.io/Front-End/amazon/index" class="live-btn" target="_blank">LIVE</a>
                 </div>
-                <h2>Nowarch Architecture</h2>
+                <h2>Amazon clone</h2>
                 <p>Showcase using HTML & CSS Flexbox.</p>
             </div>
         </div>
@@ -918,5 +867,15 @@
             </div>
         </div>
     </footer>
+<script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+
 </body>
 </html>
