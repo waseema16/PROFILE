@@ -920,7 +920,7 @@
         document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
-            emailjs.sendForm(' service_jjtbuyt', 'template_k0fjrb4', this)
+            emailjs.sendForm('service_jjtbuyt', 'template_k0fjrb4, this)
                 .then(function (response) {
                     alert("Message sent successfully!");
                     document.getElementById('contact-form').reset();
